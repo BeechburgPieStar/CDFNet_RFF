@@ -19,11 +19,16 @@ The proposed **Confidence-Aware Dynamic Fusion Network (CDFNet)** is part of an 
 Receivers are divided into four groups (R1–R4).  
 A four-fold cross-validation protocol is adopted, where one group is used for testing and the remaining groups for training.
 
+- **R1**: --test_round 0
+- **R2**: --test_round 1
+- **R3**: --test_round 2
+- **RE**: --test_round 3
+  
 ### Cross-Channel Settings
 Three training configurations are considered:
-- **Exp1**: train on one day
-- **Exp2**: train on two days
-- **Exp3**: train on three days
+- **Exp1**: train on one day (--train_date 1)
+- **Exp2**: train on two days (--train_date 1 2)
+- **Exp3**: train on three days (--train_date 1 2 3)
 
 Performance is reported for each receiver group, and **Avg.** denotes the mean accuracy over R1–R4.
 
@@ -49,4 +54,11 @@ These baselines are provided to analyze the respective roles of raw and equalize
 
 ### CDFNet (raw + eq)
 The CDFNet implementation will be released after the associated paper is accepted.
+
+### License
+
+```
+This project is distributed under a custom non-commercial license. Any form of commercial use is prohibited.
+```
+
 
